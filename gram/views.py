@@ -82,7 +82,7 @@ def logout(request):
 #Login page view function
 # def login(request):
 #     return render(request, 'registration/login.html')
-def custom_login(request):
+def login(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -97,6 +97,7 @@ def custom_login(request):
             pass
 
     # If GET request or authentication fails, render the login page
+    print("!!!============== login view   ", request)
     return render(request, 'registration/login.html')
     
 #################################################################################################################################################################################
