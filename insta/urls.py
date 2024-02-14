@@ -22,7 +22,8 @@ urlpatterns = [
     path('', include('gram.urls')),
 
     #url for registration
-    path('login/', LoginView.as_view(template_name='registration/login.html'), name='login'),
+    # path('login/', LoginView.as_view(template_name='registration/login.html'), name='login'),
+    path('login/',views.login,name ='login'),
     path('accounts/', include('registration.backends.simple.urls')),
 
 ]
