@@ -98,7 +98,7 @@ def login(request):
 
     # If GET request or authentication fails, render the login page
     print("!!!============== login view   ", request)
-    return render(request, 'registration/login.html')
+    return render(request, 'registration/logintest.html')
     
 #################################################################################################################################################################################
 #UPLOAD PAGE VIEW FUNCTION
