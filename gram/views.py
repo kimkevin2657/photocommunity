@@ -80,7 +80,23 @@ def logout(request):
 #################################################################################################################################################################################
 
 #Login page view function
-def login(request):
+# def login(request):
+#     return render(request, 'registration/login.html')
+def custom_login(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            # Redirect to a success page or user's profile
+            return redirect('/')  # Change this to your desired redirect URL
+        else:
+            # Display an error message
+            # messages.error(request, 'Invalid username or password.')
+            pass
+
+    # If GET request or authentication fails, render the login page
     return render(request, 'registration/login.html')
     
 #################################################################################################################################################################################

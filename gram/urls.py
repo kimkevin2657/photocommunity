@@ -73,7 +73,7 @@ urlpatterns=[
     #LOGIN-Page url!
     
     #This is the Login page url 
-    path('login',views.login,name ='login'),
+    # path('login',views.login,name ='login'),
 
 #################################################################################################################################################################################
 #URL FOR LOG-OUT PAGE
