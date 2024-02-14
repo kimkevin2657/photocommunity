@@ -32,7 +32,7 @@ authenticated users
 #################################################################################################################################################################################
 
 #Home page view function
-@login_required(login_url='/accounts/login/')
+@login_required(login_url='/login')
 def index(request):
     all_images = Image.objects.all()
     all_users = Profile.objects.all()
@@ -45,7 +45,7 @@ def index(request):
 #################################################################################################################################################################################
 
 #Explore page view function
-@login_required(login_url='/accounts/login/')
+@login_required(login_url='/login')
 def explore(request):
     return render(request, 'display/explore.html')
 
@@ -54,7 +54,7 @@ def explore(request):
 #################################################################################################################################################################################
 
 #Notification page view function
-@login_required(login_url='/accounts/login/')
+@login_required(login_url='/login')
 def notification(request):
     return render(request, 'display/notification.html')
 
@@ -63,7 +63,7 @@ def notification(request):
 #################################################################################################################################################################################
 
 #Profile page view function
-@login_required(login_url='/accounts/login/')
+@login_required(login_url='/login')
 def profile(request):
     return render(request, 'display/userprofile.html')
 
@@ -105,7 +105,7 @@ def login(request):
 #################################################################################################################################################################################
 
 #Login page view function
-@login_required(login_url='/accounts/login/')
+@login_required(login_url='/login')
 def upload(request):
     current_user = request.user
     p = Profile.objects.filter(id=current_user.id).first()
