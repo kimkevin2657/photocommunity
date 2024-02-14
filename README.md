@@ -1,105 +1,35 @@
+# django_zero_to_instagram
 
+장고를 이용한 인스타그램 클론 코딩입니다.
 
-#                                                    INSTAGRAM.
+강의 유튜브를 기반으로 합니다.
 
+유튜브 : https://youtu.be/M8UPyeF5DfM  
+관련 blog : https://cholol.tistory.com/547
 
-#                                                  WEBSITE DISPLAY.
-# Website Layout
+---
 
+## 실행
 
-## This is to Show the page is responsive and to also show the layout design
+python 3.7 이상 버전 설치 후
 
+```
+# 가상환경 생성 
+python -m venv venv
 
-## - Full Screen layout
+# 가상환경 실행
+source ./venv/Scripts/activate
 
-![](spec.md/Disp7.png)
+# 필요 package 설치
+pip install -r requirements.txt
 
+# migrate 명령어로 DB 생성
+python manage.py makemigrations
+python manage.py migrate
 
-## - Mid Size Full Screen layout
+# 서버 실행
+python manage.py runserver
 
-![](spec.md/Disp6.png)
-
-
-
-## - Mid Size Screen
-
-![](spec.md/Disp5.png)
-
-![](spec.md/Disp2.png)
-
-## - Phone Screen Layout
-##     Large Phone Screen
-
-![](spec.md/Disp3.png)
-![](spec.md/Disp1.png)
-
-## - Small Phone Screen
-
-![](spec.md/Disp4.png)
-
-#  PROJECT DESCRIPTION
-
-## In plain simple terms this is an Instagram-clone A photo application that you Display your photos for others to see.
-
-## Author
-Collins Kariuki
-
-## Prerequisites
--You need to have nano text editor installed. you can find out whether you have it installed by typing nano --version in your terminal. For most linux distributions, it is installed by default. However, if you don't have it installed, you can quicky do that by typing sudo apt-get install nano in your terminal.
-
--You need to have (python3.6) installed in your machine
-
--Python3.6. Installation ($ sudo apt-get install python3.6).
-
--Django1.11. Installation ($ pip install django==1.11).
-
--Psycopg2. Installation ($ pip install psycopg2).
-
--Bootstrap3. Installation ($ pip install django-bootstrap3).
-
--Pillow. Installation ($ pip install pillow).
-
-# Setup/Installation Requirements
-
--Internet connection
-
--webpage URL:
-
--To get to this webpage fist you need to get to my github repository
-
--The link to my github Repository is: https://github.com/zecollokaris
-
--from there you can access the project
-
--git clone project.
-
--install dependancies in requirements.txt file pip install -r requirements.txt
-
--cd into project
-
--create a virtual environment ($ python3.6 -m venv virtual)
-
--Activate Virtual Environmrnt. ($ source virtual/bin/activate)
-
--Run The Project-: ($ python manage.py runserver)
-
-#{follow the above instructions for set up}
-
-#Technologies Used
-
--HTML5
--CSS
--Bootstarap
--Python3.6
--Django 2.0.7
--Psycopg2
--PostgreSQL
-
-#Contact
-
--Mobile number: (254) 798731203
--Email Address: collo.kariss@gmail.com
--github: zecollokaris
-
-## License
-Collins Kariuki - MIT (c)2018 LICENSE
+# 브라우져로 접속
+http://127.0.0.1:8000/main/
+```
